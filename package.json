@@ -1,0 +1,15 @@
+{
+  "name": "js_modules_exercises",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A set of exercises to get to know the CommonJS module system better.",
+  "author": "Kris Walker (http://www.kixx.name)",
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "mocha": "~1.18.2",
+    "should": "~3.3.1"
+  }
+}
