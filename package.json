@@ -6,7 +6,7 @@
   "author": "Kris Walker (http://www.kixx.name)",
   "license": "MIT",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha -R nyan"
   },
   "dependencies": {
     "mocha": "~1.18.2",
