@@ -18,21 +18,21 @@ describe("CommonJS modules in Node.js", function () {
 
   describe("module id", function () {
 
-    it("should *not* raise an exception", function () {
+    it("knows where the blues brothers are going", function () {
       require('../lib/blues_brothers').areGoingTo.should.eql('Chicago');
     });
   });
 
   describe("package module id", function () {
 
-    it("should *not* raise an exception", function () {
+    it("knows some city elevations", function () {
       require('../lib/elevations').denver.should.eql(5280);
     });
   });
 
   describe("synchronous loading and evaluation", function (done) {
 
-    it("can't set exports asynchronously", function () {
+    it("knows the distance from New York to Chicago", function () {
       require('../lib/distances').fromNewYork2Chicago.should.eql(807);
     });
   });
