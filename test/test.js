@@ -6,6 +6,7 @@ require('should');
 
 describe("CommonJS modules in Node.js", function () {
 
+
   describe("exported properties", function () {
 
     it("knows some city nicknames", function () {
@@ -16,12 +17,14 @@ describe("CommonJS modules in Node.js", function () {
     });
   });
 
+
   describe("module id", function () {
 
     it("knows where the blues brothers are going", function () {
       require('../lib/blues_brothers').areGoingTo.should.eql('Chicago');
     });
   });
+
 
   describe("package module id", function () {
 
@@ -30,12 +33,14 @@ describe("CommonJS modules in Node.js", function () {
     });
   });
 
+
   describe("synchronous loading and evaluation", function (done) {
 
     it("knows the distance from New York to Chicago", function () {
       require('../lib/distances').fromNewYork2Chicago.should.eql(807);
     });
   });
+
 
   describe("module closures", function () {
 
@@ -47,10 +52,23 @@ describe("CommonJS modules in Node.js", function () {
     });
   });
 
+
   describe("circular dependencies", function () {
 
     it("should compute the name of our town", function () {
       require('../lib/our_town').say().should.eql('Saratoga Springs NY');
+    });
+  });
+
+
+  describe("module cache", function () {
+
+    it("should foo", function () {
+      var sanFranBefore1906 = require('../lib/san_francisco');
+      require('../lib/rebuild_san_francisco').rebuild();
+      var sanFranAfter1906 = require('../lib/san_francisco');
+
+      sanFranBefore1906.should.not.equal(sanFranAfter1906);
     });
   });
 });
