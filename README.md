@@ -8,6 +8,8 @@ Currently all the tests in this repository are failing. Your objective is to get
 
 Currently there are 7 tests related to different concepts in the Node.js module system. They are ordered in the `test/test.js` file by *approximate* difficulty from top to bottom.
 
+If want to check your solutions (or cheat) you can checkout the answer_key git branch of the repo.
+
 ### Setup
 If you haven't yet, install [Node.js](http://nodejs.org/).
 
